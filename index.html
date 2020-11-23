@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>VueJs Start</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+<div id="vue-app">
+    <h1>Data and Methods in Vue</h1>
+    <h3>{{greet('morning')}}</h3>
+    <p>Name: {{name}}</p>
+    <p>Job: {{job}}</p>
+    <h1>Data Binding in Vue</h1>
+    <a v-bind:href="website">Google</a>
+    <p v-html="websiteTag"></p>
+    <input type="text" :value="name"/>
+    <h1>Events in Vue</h1>
+    <p class="age">Age: {{age}}</p>
+    <button @click="add(1)">Add a year</button>
+    <button v-on:click="sub(1)">Subtract a year</button>
+    <button @dblclick="add(10)">Add 10 years by double click</button>
+    <button v-on:dblclick="sub(10)">Subtract 10 years by double click</button>
+    <div id="canvas" @mousemove="updateXY">({{x}},{{y}})</div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
