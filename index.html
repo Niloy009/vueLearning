@@ -81,6 +81,14 @@
         <h3> {{index}} . {{manager.name}}</h3>
         <p>{{manager.age}}</p>
     </template>
+
+    <h1>Multiple instances in Vue</h1>
+    <h2>{{title}}</h2>
+</div>
+<div id="vue-two">
+    <h2>{{title}}</h2>
+    <p>{{greet}}</p>
+    <button v-on:click="changedTitle">Changed vueOne title</button>
 </div>
 <script src="app.js"></script>
 </body>

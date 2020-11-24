@@ -1,6 +1,7 @@
-new Vue({
+var vueOne = new Vue({
     el: '#vue-app',
     data: {
+        title:'From vueOne',
         name: 'Niloy Saha Roy',
         job: 'FullStack Developer',
         website: 'http://www.google.com',
@@ -69,3 +70,21 @@ new Vue({
         }
     }
 });
+
+var vueTwo = new Vue({
+    el: '#vue-two',
+    data: {
+        title: 'from varTwo'
+    },
+    methods: {
+        changedTitle: function () {
+            vueOne.title = 'Changed from the vueTwo';
+        }
+    },
+    computed: {
+        greet: function(){
+            return "Hello From vueTwo";
+        }
+    }
+
+})
